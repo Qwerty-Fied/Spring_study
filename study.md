@@ -6,3 +6,12 @@
 
 그냥 articles로 들어감 -> 아무것도 없다, Submit 버튼은 있는데 뒤로가기버튼은 없다
 
+<a href="url"></a>을 통해 페이지를 이동할 수 있는 버튼을 만들 수 있다.
+
+입력하면 상세 페이지로 이동한다
+메서드에 return "redirect:URL_주소";
+뒤에 + 연산자를 통해서 전에 만들어뒀던 Article 객체 saved를 이용
+saved 객체 내 .getId()를 호출해 사용할 수 있다. (Article 클래스에 롬복 @Getter를 추가한다
+Title과 Content가 입력되면서 만들어진 Id를 가져와 "/articles/1" 로 리다이렉션된다.
+
+index.mustache 의 테이블에 동적으로 생성되는 ArticleList에도 a 태그에 href를 추가해 링크가 가능하게 할 수 있다.
